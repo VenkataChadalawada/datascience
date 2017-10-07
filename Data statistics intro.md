@@ -1,10 +1,10 @@
-#Types of data:
--Numerical
--categorical
--ordinal
+# Types of data:
+- Numerical
+- categorical
+- ordinal
 
-##Numerical
+## Numerical
 
-##Categorial
+## Categorial
 
-##Ordinal
+## Ordinal
