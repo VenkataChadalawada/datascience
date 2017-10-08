@@ -85,3 +85,68 @@ incomes.std()
 incomes.var()
 ```
 
+### Probability Distribution Function
+Gives you the probability of a data point falls within some given range of a given value
+
+## Data Distribution
+### 1 Uniform Distribution
+```python
+%matplotlib inline
+import numpy as np
+import matplotlib.pyplot as plt
+
+values = np.random.uniform(-10.0,10.0,10000)
+plt.hist(values,50)
+plt.show()
+```
+### 2 Normal / Guassian Distribution PDF
+```python
+import numpy as np
+from scipy.stats import norm
+import matplotlib.pyplot as plt
+x=np.arrange(-3,3,0.01)
+plt.plot(x, norm.pdf(x))
+
+mu=0.5
+sigma=0.2
+values = np.random.normal(mu,sigma,500)
+plt.hist(values,50)
+plt.show()
+```
+### 3 Exponential Probability Density Function PDF (Power Law)
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import expon
+
+x=np.arrange(0,10,0.001)
+//arrange(start,end,numofvalues)
+plt.plot(x,expon.pdf(x))
+```
+### 4 Binomial Probability Mass Function PMF (discrete)
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import binom
+x=np.arrange(0,10,0.01)
+//shape parameters n and p - n is x axis and p is y axis
+n=10
+p=0.5
+plt.plot(x, binom.pdf(x,n,p))
+```
+
+### 5 Poisson Probability Mass Function PMF (continuous)
+Example: My website gets on average 500 visits per day. What's the odds of getting 550?
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import poisson
+mu=500
+x=np.arrange(400,600,0.5)
+plt.plot(x,poission.pmf(x,mu))
+```
+
+
+
+
+
