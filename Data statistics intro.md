@@ -145,15 +145,40 @@ mu=500
 x=np.arrange(400,600,0.5)
 plt.plot(x,poission.pmf(x,mu))
 ```
-hi this is sravani
-# Hi this is sravani
 
-``` html
-<html>
-  <div>
-  </div>
-</html>
+## Percentiles
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+vals = np.random.normal(50,10,1000)
+np.percentile(vals, 50)
 ```
+### Moments
+Qualitative measures of the shape of a probability density function
+#### first moment - Mean
+#### second moment - Variance
+#### third moment - Skew
+- Positive skew - longer tail on right
+- negative skew - longer tail on left
+#### fourth moment - Kurtosis
+how thick is the tail and how sharp is the peak compared to normal distribution
+higher peaks have higher kurtosis
+```python
+import numpy as np
+import scipy.stats as sp
+import matlabplot.pyplot as plt
+vals = np.random.normal(0,0.5,10000)
+plt.hist(vals, 50)
+np.mean(vals)
+np.var(vals)
+sp.skew(vals)
+//negative means left viceversa
+sp.kurtosis(vals)
+```
+
+
+
+
 
 
 
