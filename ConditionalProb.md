@@ -1,7 +1,7 @@
 # Conditional Probability
 P(B|A) Probability of B given A has occured
 We know:
-## P(B|A) = P(A,B) / P(A)
+### P(B|A) = P(A,B) / P(A)
 Probability of A and B both occuring
 
 60% of students passed both tests
@@ -41,3 +41,13 @@ P(E,F) = P(30's,purchase) = float(purchases[30])/10000.0 /PF
 0.04
 
 ```
+# Bayes Theorem
+### P(A/B) = (P(A) P(B/A)) /  P(B)
+
+Example: 
+Event A = Is the User of Drug
+Event B = tested positive for the Drug
+eg:
+P(A/B) = P(A) P(B/A) / P(B) = 0.003 * 0.99 / 0.013 = 22.8%
+so the odds of someone being an actual user of drug given they tested positive is only 22.8%
+even though P(B/A) is high 99% It doesn't mean P(A/B) is high
