@@ -32,3 +32,16 @@ scatter(pageSpeeds, purchaseAmount)
 
 covariance(pageSpeeds, purchaseAmount)
 ```
+Correlation eg:-
+
+```python
+def correlaton(x,y):
+  stddevx=x.std()
+  stddevy=y.std()
+  return covariance(x,y)/stddevx/stddevy
+
+correlation(pageSpeeds,purchaseAmount)
+
+//numpy can do it for us
+numpy.corrCoef(pageSpeeds, purchaseAmount)
+```
