@@ -1,5 +1,5 @@
 # Linear Regression
-`` python
+``` python
 %matplotlib inline
 import numpy as np
 from pylab import *
