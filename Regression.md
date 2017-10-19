@@ -8,7 +8,7 @@ purchaseAmount = 100-(pageSpeeds + np.random.normal(0,0.1,1000))*3
 scatter(pageSpeeds, purchaseAmount)
 ```
 ## using scipy
-`` python
+``` python
 from scipy import stats
 slope, intercept, r_value, p_value, std_err = stats.linregress(pageSpeeds, purchaseAmount)
 ```
