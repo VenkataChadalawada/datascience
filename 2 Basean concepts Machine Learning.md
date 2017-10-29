@@ -21,7 +21,7 @@ data = data.append(dataFrameFromDirectory('e:/venchad/DataScience/emails/spam', 
 data = data.append(dataFrameFromDirectory('e:/venchad/DataScience/emails/ham', 'ham'))
  ```
  
- ### full code
+ ### step 3 iterate through each file under each directory and insert them into dataframe (steps 1 2 3 together)
  ``` python
  import os
 import io
@@ -62,3 +62,22 @@ data = DataFrame({'message': [], 'class': []})
 data = data.append(dataFrameFromDirectory('e:/venchad/DataScience/emails/spam', 'spam'))
 data = data.append(dataFrameFromDirectory('e:/venchad/DataScience/emails/ham', 'ham'))
  ```
+### step 4 Now we use MultiNomial NB
+#### Now we will use a CountVectorizer to split up each message into its list of words, and throw that into a MultinomialNB classifier. Call fit() and we've got a trained spam filter ready to go! It's just that easy.
+``` python
+vectorizer = CountVectorizer()
+counts = vectorizer.fit_transform(data['message'].values)
+
+classifier = MultinomialNB()
+targets = data['class'].values
+classifier.fit(counts, targets)
+```
+#### step 5 now we have classifier ready which is trained on given data. Let's try a new email into it and see how it classifies
+``` python
+examples = ['Free Viagra now!!!', "Hi Bob, how about a game of golf tomorrow?"]
+example_counts = vectorizer.transform(examples)
+predictions = classifier.predict(example_counts)
+predictions
+```
+##### o/p array[spam,ham] this says first one is spam and second one is ham
+
