@@ -5,8 +5,8 @@ A measure of data set's disorder.
 entropy of 0 - all the classes in data would be same
 entropy is very high if it lot of classes.
 ##### computing entropy:
-H(S) = -P1lnP1-P2lnP2-......PnlnPn
-Pi = proportion of that data for ith class
+``` python H(S) = -P1lnP1-P2lnP2-......PnlnPn
+Pi = proportion of that data for ith class `
 
 
 ## Decision Trees
